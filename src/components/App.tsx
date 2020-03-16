@@ -89,8 +89,8 @@ export const App = (): React.JSX => {
     const rect = canvasRef?.current?.getBoundingClientRect();
     setAnimationState({
       ...animationState,
-      clipX: clickEvent.clientX - rect.left,
-      clipY: clickEvent.clientY - rect.top,
+      clipX: clickEvent.clientX - rect.left - 15,
+      clipY: clickEvent.clientY - rect.top - 20,
       startingTimestamp: + new Date()
     });
   };
